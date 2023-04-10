@@ -12,7 +12,6 @@ html {
 html,
 body {
   height: 100%;
-  /* width: 100%; */
 }
 
 body {
@@ -24,43 +23,64 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* padding: 2rem; */
   height: max-content;
-  gap: 1.5rem;
-  background-color: red;
-  flex: 0 1 auto;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-top: 1rem;
 }
 
 label,
-p,
-button {
-  font-size: 1.5rem;
-  font-weight: 700;
+p {
+  font-size: 2rem;
 }
 
 p {
   margin: 0 auto;
 }
 
-main {
-  background-color: blue;
-  /* position: absolute; */
-  flex: 1 1 auto;
-}
-
-.slider-wrapper:nth-child(1) {
-    margin-left: 2rem;
+.color-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .random-button {
-    margin-right: 2rem;
-    padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+#red {
+  accent-color: red;
+}
+
+#green {
+  accent-color: green;
+}
+
+#blue {
+  accent-color: blue;
 }
 
 @media screen and (min-width: 800px) {
   header {
     height: 6rem;
     flex-direction: row;
+    gap: 1.5rem;
+    padding-top: 0;
+  }
+
+  .random-button {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .slider-wrapper:nth-child(1) {
+    margin-left: 2rem;
   }
 
   .hex-color-code {
